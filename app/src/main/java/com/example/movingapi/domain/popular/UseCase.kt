@@ -10,6 +10,6 @@ import javax.inject.Inject
 @Reusable
 class GetPopularMoviesUseCase @Inject constructor(private val popularMoviesRepository: PopularMoviesRepository) {
     operator fun invoke(): Flow<PagingData<Results>> {
-        return popularMoviesRepository.getPopularMovies()
+        return popularMoviesRepository.getUpComingMovies()
     }
 }

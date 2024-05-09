@@ -10,6 +10,8 @@ import java.io.IOException
 
 class MoviePagingSource(
     private val movieApi: MovieApi,
+    private val isSearchEndPoint: Boolean,
+    private val searchQuery: String? = null
 ) : PagingSource<Int, Results>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, Results> {

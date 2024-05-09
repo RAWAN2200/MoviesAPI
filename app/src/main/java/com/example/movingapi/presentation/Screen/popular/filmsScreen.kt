@@ -1,6 +1,7 @@
 package com.example.movingapi.presentation.Screen.popular
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -36,6 +37,7 @@ import com.example.movingapi.Constant.MOVIE_IMAGE_BASE_URL
 import com.example.movingapi.R
 import com.example.movingapi.model.Results
 import com.example.movingapi.model.SearchResponse
+import com.example.movingapi.presentation.navigation.Screens
 import kotlinx.coroutines.flow.MutableStateFlow
 
 @Composable
@@ -55,7 +57,10 @@ fun filmsScreen(navController: NavHostController, popularMoviesState: MutableSta
                         model = "${MOVIE_IMAGE_BASE_URL}${BackdropSize.w300}/${moviePagingItems[index]?.posterPath}",
                         contentDescription = "",
                         modifier = Modifier
-                            .padding(2.dp),
+                            .padding(2.dp)
+                            .clickable {
+                                navController.navigate(Screens.MovieDetail.route + "/${moviePagingItems[index]?.id}")
+                            },
                         contentScale = ContentScale.FillWidth,
                         error = painterResource(R.drawable.ic_launcher_background),
                         placeholder = painterResource(R.drawable.ic_launcher_background)

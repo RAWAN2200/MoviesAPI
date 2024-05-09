@@ -128,10 +128,10 @@ fun onBoardingScreen1() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(10.dp)
-                .rotate(-90f)
+//                .rotate(-90f)
                 .paint(
                     // Replace with your image id
-                    painterResource(id = R.drawable.movienight),
+                    painterResource(id = R.drawable.brulli),
                     contentScale = ContentScale.FillWidth,
                     sizeToIntrinsics = false
                 )
@@ -184,10 +184,10 @@ fun onBoardingScreen2() {
             modifier = Modifier
                 .fillMaxWidth()
                 .height(10.dp)
-                .rotate(-90f)
+//                .rotate(-90f)
                 .paint(
                     // Replace with your image id
-                    painterResource(id = R.drawable.movienight),
+                    painterResource(id = R.drawable.brulli),
                     contentScale = ContentScale.FillWidth,
                     sizeToIntrinsics = false
                 )
@@ -240,10 +240,10 @@ fun onBoardingScreen3(navController: NavHostController, onFinishClick: () -> Uni
             modifier = Modifier
                 .fillMaxWidth()
                 .height(10.dp)
-                .rotate(-90f)
+//                .rotate(-90f)
                 .paint(
                     // Replace with your image id
-                    painterResource(id = R.drawable.horrmovies),
+                    painterResource(id = R.drawable.brulli),
                     contentScale = ContentScale.FillWidth,
                     sizeToIntrinsics = false
                 )
@@ -257,7 +257,7 @@ fun onBoardingScreen3(navController: NavHostController, onFinishClick: () -> Uni
         ) {
             item {
                 Image(
-                    painter = painterResource(id = R.drawable.brulli),
+                    painter = painterResource(id = R.drawable.horrmovies),
                     contentDescription = "fil image",
                     modifier = Modifier.size(350.dp)
                 )
@@ -300,7 +300,7 @@ fun onBoardingScreen3(navController: NavHostController, onFinishClick: () -> Uni
                             modifier = Modifier .padding(90.dp),
                             shape = RoundedCornerShape(5.dp)
                         ) {
-                            Text(text = "Finish", modifier = Modifier.padding(4.dp))
+                            Text(text = "Go to the movies", modifier = Modifier.padding(4.dp))
                         }
                     }
                 }

@@ -12,11 +12,17 @@ sealed class Screens(val route: String) {
     data object OnBoarding : Screens("onBoardingScreen1")
     data object PopularMovie : Screens("filmsScreen")
 
+    object Home : Screens("popular_movie_screen")
+
     data object Search : Screens("search_route")
 
     data object Profile : Screens("profile_route")
 
+    object MovieDetail : Screens("movie_detail_route")
+
 }
+
+
 
 
 data class BottomNavigationItem(
